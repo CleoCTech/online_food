@@ -28,21 +28,21 @@
                     <a href="#" class="nav-link active">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            Starter Pages
+                            Category Page
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">
+                        <a href="{{ route('category')}}" class="nav-link active">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Active Page</p>
+                                <p>Add Category</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                        <a href="{{ route('manage-category')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Inactive Page</p>
+                                <p>Manage-Category</p>
                             </a>
                         </li>
                     </ul>
@@ -55,6 +55,28 @@
                             <span class="right badge badge-danger">New</span>
                         </p>
                     </a>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>Food
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                        <a href="{{route('food')}}" class="nav-link active">
+                                <i class="fa fa-plus-circle nav-icon"></i>
+                                <p>Generate Food</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('manage-food')}}" class="nav-link active">
+                                <i class="fa fa-edit nav-icon"></i>
+                                <p>Manage Food</p>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </nav>
