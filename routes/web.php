@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', 'FrontEndController@index');
+Route::get('/', 'FrontEndController@index')->name('/');
 Route::get('/food-category/{id}', 'FrontEndController@show')->name('food-category');
 Route::post('/add-cart', 'CartController@insert')->name('add-cart');
 Route::get('/cart', 'CartController@show')->name('cart');
@@ -27,9 +27,14 @@ Route::get('/checkout', 'CheckoutController@check')->name('checkout');
 Route::get('/checkout-payment', 'CheckoutController@payment')->name('checkout-payment');
 Route::post('/make-order', 'CheckoutController@order')->name('make-order');
 Route::get('/order-complete', 'CheckoutController@complete')->name('order-complete');
-Route::get('/stripe-payment', 'CheckoutController@stripe')->name('stripe-payment');
+Route::get('/stripe', 'CheckoutController@stripe')->name('stripe');
 Route::get('/shipping', 'CustomerController@shipping')->name('shipping');
 /*--Cart routes ends here--*/
+
+/*--Cart stripe starts here--*/
+Route::get('/stripe-payment', 'StripeController@handleGet')->name('stripe-payment');
+Route::post('/stripe-payment', 'StripeController@handlePost')->name('stripe-payment');
+/*--Cart stripe  ends here--*/
 
 /*--customer routes start here--*/
 Route::get('/signup', 'CustomerController@show')->name('sign-up');

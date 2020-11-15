@@ -63,7 +63,7 @@
                     </div>
                     <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="{{route('/')}}" class="active">Home</a></li>
                             <!-- Mega Menu -->
                            @foreach ($categories as $category)
                                 <li><a href="{{route('food-category', ['id'=>$category->category_id])}}">{{$category->category_name}}</a></li>
@@ -88,7 +88,7 @@
     <div class="banner-text">
         <div class="container">
             <h2>Delicious food from the <br> <span>Best Chefs For you.</span></h2>
-            <div class="agileits_search">
+            {{--  <div class="agileits_search">
                 <form action="#" method="post">
                     <input name="Search" type="text" placeholder="Enter Your Area Name" required="">
                     <select id="agileinfo_search" name="agileinfo_search" required="">
@@ -102,7 +102,7 @@
                     </select>
                     <input type="submit" value="Search">
                 </form>
-            </div>
+            </div>  --}}
         </div>
     </div>
 </div>

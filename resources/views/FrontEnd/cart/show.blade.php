@@ -76,7 +76,7 @@
 
 
 
-            @if (Session::get('customer_id','shipping_id'))
+            @if (Session::get('customer_id'))
             <div class="col-md-9 product-w3ls-right">
                 <a href="{{url('/checkout-payment')}}" class="btn btn-info" style="float: right;">
                         <i class="fa fa-shopping-bag"></i>

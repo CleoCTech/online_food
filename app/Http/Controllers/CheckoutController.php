@@ -22,7 +22,7 @@ class CheckoutController extends Controller
     public function payment ()
     {
 
-
+       // dd(Session::get('customer_id'));
         return view('FrontEnd.checkout.checkout_payment');
     }
 
@@ -70,6 +70,7 @@ class CheckoutController extends Controller
 
             Cart::destroy();
            // dd('Success');
+           Session::flash('success', 'Payment has been succesfully processed');
             return redirect('order-complete');
 
         } elseif($paymentType == 'Stripe') {
@@ -111,8 +112,9 @@ class CheckoutController extends Controller
 
             Cart::destroy();
 
-            return redirect('stripe-payment');
 
+
+            return redirect('stripe');
             //dd("success");
 
         }

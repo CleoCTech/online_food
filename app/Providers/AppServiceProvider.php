@@ -3,8 +3,9 @@
 namespace App\Providers;
 use App\Category;
 use Illuminate\Support\ServiceProvider;
-// use View;
-use Illuminate\Support\Facades\View;
+use Illuminate\Pagination\Paginator;
+use View;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -24,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Paginator::useBootstrap();
 
         View::composer('FrontEnd.include.banner', function($view){
             $view->with('categories', Category::where('category_status', 1)->get());
