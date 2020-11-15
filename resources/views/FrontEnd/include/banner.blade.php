@@ -85,10 +85,10 @@
     </div>
     <!-- //header-end -->
     <!-- banner-text -->
-    <div class="banner-text">
+    {{--  <div class="banner-text">
         <div class="container">
             <h2>Delicious food from the <br> <span>Best Chefs For you.</span></h2>
-            {{--  <div class="agileits_search">
+            <div class="agileits_search">
                 <form action="#" method="post">
                     <input name="Search" type="text" placeholder="Enter Your Area Name" required="">
                     <select id="agileinfo_search" name="agileinfo_search" required="">
@@ -102,7 +102,7 @@
                     </select>
                     <input type="submit" value="Search">
                 </form>
-            </div>  --}}
+            </div>
         </div>
-    </div>
+    </div>  --}}
 </div>

@@ -14,7 +14,7 @@
                     <hr>
                     <div class="col-md-6">
                         <div class="card">
-                            <div class="card-header text-truncate" style="font-size:20px;">your Order has been placed</div>
+                            <div class="card-header text-truncate" style="font-size:20px;">Your Order has been placed</div>
                             <div class="card-body">
                                 <strong class="text-bold"  style="font-size:20px;">Your order number is
                                     @if (Session::get('sum')==null)
@@ -40,9 +40,9 @@
                                 </label>
                                 <input type="text" name="name" class="form-control" placeholder="Enter Your Name" id="">
                                 <label for="card-element">
-                                    Your Payable Acoount Number
+                                    Your Payable Amount
                                 </label>
-                                <input type="text" name="grandTotal" class="form-control" placeholder="Enter Your Amount" id="">
+                                 <input type="text" name="grandTotal" class="form-control" value="{{Session::get('sum')}}" placeholder="Enter Your Amount" id="">
                                 <label for="card-element">
                                     Credit or debit card
                                 </label>

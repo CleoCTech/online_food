@@ -4,7 +4,7 @@
  @endsection
 @section('content')
 <!-- add-products -->
-<div class="add-products">
+{{--  <div class="add-products">
     <div class="container">
         <div class="add-products-row">
             <div class="w3ls-add-grids">
@@ -24,11 +24,10 @@
             <div class="clearfix"> </div>
         </div>
     </div>
-</div>
+</div>  --}}
 <!-- //add-products -->
 <!-- order -->
 <div class="wthree-order">
-    <img src="images/i2.jpg" class="w3order-img" alt=""/>
     <div class="container">
         <h3 class="w3ls-title">How To Order Online Food</h3>
         <p class="w3lsorder-text">Get your favourite food in 4 simple steps.</p>

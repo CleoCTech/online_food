@@ -73,6 +73,10 @@ Route::post( '/update-food', 'DishController@update')->name('update-food');
 Route::get( '/activate-food/{id}', 'DishController@activate')->name('activate-food');
 Route::get( '/deactivate-food/{id}', 'DishController@deactivate')->name('deactivate-food');
 Route::get( '/delete-food/{id}', 'DishController@destroy')->name('delete-food');
-
-
 /*--Food ends  here--*/
+
+/*--Order starts  here--*/
+Route::get( '/manage-order', 'OrderController@manageOrder')->name('manage-order');
+Route::get( '/view-order/{order_id}', 'OrderController@viewOrder')->name('view-order');
+
+/*--Order ends  here--*/

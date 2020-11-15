@@ -20,7 +20,7 @@ class StripeController extends Controller
         # code...
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         Stripe\Charge::create([
-            "amount"=>$request->input('grandTotal'),
+            "amount"=>round($request->input('grandTotal')*100),
             "currency"=>"usd",
             "source"=>$request->stripeToken,
             "description"=>$request->name
